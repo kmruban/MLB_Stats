@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://mlbstatsapi.us-east-1.elasticbeanstalk.com/User/login", {
+      const { data } = await axios.post("https://localhost:5001/User/login", {
         username,
         password,
       });
