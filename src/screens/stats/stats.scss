@@ -1,0 +1,159 @@
+@import "../../global.scss";
+
+.stats_page {
+    margin: 2.5vh 16px 16px 16px;
+
+    h1{
+      color: $mlbLogoBlueLight;
+    }
+
+    .stats_routes {
+      margin-bottom: 20px;
+
+      a {
+        button {
+          background-color: transparent;
+          color: $mlbLogoBlue;
+          font-weight: 700;
+          font-size: 26px;
+          margin-right: 10px;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+
+        button:hover{
+          color: $mlbLogoRed;
+        }
+      }
+    }
+
+    .table_scroller {
+      padding-left: calc(25% + 10px);
+      overflow-x: auto;
+
+      .stats_table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+
+        thead {
+          tr {
+            th {
+              height: 25px;
+              border: 1px solid black;
+              font-size: 16px;
+
+              button {
+                cursor: pointer;
+                height: 100%;
+                width: 100%;
+                border-color: $mlbLogoBlue;
+                font-weight: 700;
+                font-size: 15px;
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+              }
+
+              button.ascending::after {
+                content: "⌄";
+                display: inline-block;
+                margin-left: 2.5px;
+              }
+              button.descending::after {
+                content: "^";
+                display: inline-block;
+                margin-left: 2.5px;
+              }
+            }
+            .player {
+              background-color: white;
+              width: 25%;
+              position: absolute;
+              left: 16px;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            height: 35px;
+            text-align: center;
+
+            td {
+              border: 1px solid black;
+              font-size: 16px;
+
+              .logo {
+                height: 26px;
+                width: 26px;
+              }
+            }
+            .player {
+              background-color: white;
+              position: absolute;
+              left: 16px;
+              height: 35px;
+              align-items: center;
+              display: flex;
+              text-align: left;
+              font-size: 18px;
+
+              a {
+                padding-left: 2px;
+                padding-right: 2px;
+              }
+            }
+          }
+        }
+      }
+
+      .stats_table td:first-child {
+        width: 25%;
+      }
+    }
+
+    @include mobile {
+      .table_scroller {
+        padding-left: calc(35% + 14px);
+
+        table {
+          thead {
+            tr {
+              th {
+                font-size: 10px;
+              }
+              .player {
+                width: 35% !important;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                font-size: 10px !important;
+              }
+
+              .logo {
+                height: 18px;
+                width: 18px;
+              }
+
+              .player {
+                a {
+                  padding-left: 5px;
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+        }
+
+        .stats_table td:first-child {
+          width: 35%;
+        }
+      }
+    }
+  }

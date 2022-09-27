@@ -1,0 +1,66 @@
+@import "global.scss";
+
+.app {
+  width: 100vw;
+  background-color: rgb(236, 236, 236);
+
+  main{
+    .login_page{
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 120px);
+      align-items: center;
+
+      h2{
+        margin: 50px 0;
+      }
+
+      form{
+        .container{
+          div{
+            margin-bottom: 10px;
+          }
+          .submit{
+            button{
+              background-color: white;
+              padding: 6px;
+              border-radius: 5px;
+              border: 1px solid gray;
+            }
+          }
+        }
+      }
+      
+    }
+
+    .register_page{
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 120px);
+      align-items: center;
+
+      h2{
+        margin: 50px 0;
+      }
+
+      form{
+        display: flex;
+        align-items: center;
+        
+        .container{
+          div{
+            margin-bottom: 10px;
+          }
+          .submit{
+            button{
+              background-color: white;
+              padding: 6px;
+              border-radius: 5px;
+              border: 1px solid gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

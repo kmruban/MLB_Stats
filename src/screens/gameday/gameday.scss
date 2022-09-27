@@ -1,0 +1,424 @@
+@import "../../global.scss";
+
+.gameday_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .gameday_header {
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 2.5vh;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+
+    .away {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 20%;
+      padding: 2%;
+
+      .logo {
+        height: 70px;
+        width: 70px;
+      }
+
+      .away_team_name {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        justify-content: center;
+
+        a {
+          text-decoration: none;
+          font-size: 24px;
+          font-weight: 600;
+          color: black;
+        }
+        a:hover{
+          color: blue;
+        }
+
+        p {
+          margin-block-start: 5px;
+          margin-block-end: 0;
+          font-size: 12px;
+        }
+      }
+
+      .score {
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+
+    .home {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 20%;
+      padding: 2%;
+
+      .logo {
+        height: 70px;
+        width: 70px;
+      }
+
+      .home_team_name {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+
+        a {
+          text-decoration: none;
+          font-size: 24px;
+          font-weight: 600;
+          color: black;
+        }
+        a:hover{
+          color: blue;
+        }
+
+        p {
+          margin-block-start: 5px;
+          margin-block-end: 0;
+          font-size: 12px;
+        }
+      }
+
+      .score {
+        font-size: 40px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .scoring_summary {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 3vh;
+    padding-bottom: 5px;
+
+    h4 {
+      padding-left: 10px;
+      margin-block-start: 10px;
+      margin-block-end: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+
+      thead {
+        tr {
+          td {
+            font-weight: 500;
+            height: 25px;
+            width: 20px;
+            text-align: center;
+            border-top: 1px solid gray;
+            background-color: rgb(230, 230, 230);
+          }
+          td:not(:last-child) {
+            border-right: 1px solid gray;
+          }
+        }
+      }
+
+      tbody {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        background-color: white;
+        tr {
+          td {
+            text-align: center;
+
+            .teams_score_summary {
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+
+              .logo {
+                height: 30px;
+                width: 30px;
+                padding: 0px 5px;
+              }
+
+              span {
+                padding-left: 5px;
+              }
+            }
+          }
+          td:not(:last-child) {
+            border-right: 1px solid gray;
+          }
+        }
+        tr:not(:last-child) {
+          border-bottom: 1px solid gray;
+        }
+      }
+    }
+  }
+
+  .gameday_details {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin-bottom: 5vh;
+
+    .probable_pitchers_wrapper {
+      border: 1px solid gray;
+      border-radius: 5px;
+      background-color: white;
+      flex: 4;
+      margin-right: 20px;
+      max-height: 225px;
+
+      h4 {
+        margin: 0 10px;
+        margin-block-start: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid gray;
+      }
+
+      .probable_pitchers {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          margin-block-start: 0;
+          margin-block-end: 10px;
+        }
+
+        .pitchers{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 15px;
+
+          .away_pitcher{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+              height: 60px;
+              width: 60px;
+              border-radius: 100px;
+              border: 1px solid gray;
+            }
+          }
+
+          span{
+            margin: 0px 10px;
+          }
+
+          .home_pitcher{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            img{
+              height: 60px;
+              width: 60px;
+              border-radius: 100px;
+              border: 1px solid gray;
+            }
+          }
+        }
+
+        .pitchers_stats_table{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+
+          table{
+            border-collapse: collapse;
+            width: 90%;
+            margin-bottom: 15px;
+
+            thead{
+              tr{
+                th{
+                  border-top: 1px solid gray;
+                  border-bottom: 1px solid gray;
+                  border-left: 1px solid gray;
+                  font-size: 12px;
+                  font-weight: 500;
+                }
+                th:first-child{
+                  border-left: none;
+                }
+              }
+            }
+
+            tbody{
+              tr{
+                border-bottom: 1px solid gray;
+                td{
+                  border-left: 1px solid gray;
+                }
+                td:first-child{
+                  border-left: none;
+                }
+              }
+              tr:last-child{
+                border-bottom: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .batting_order_wrapper {
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      border: 1px solid gray;
+      background-color: white;
+      flex: 3;
+      margin-left: 20px;
+
+      h4 {
+        margin: 0 10px;
+        margin-block-start: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid gray;
+      }
+
+      .batting_order {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .away_order {
+          padding: 10px 10px;
+          flex: 2;
+          ul {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+            li {
+              list-style-type: none;
+            }
+          }
+        }
+        .home_order {
+          padding: 10px 10px;
+          flex: 2;
+          ul {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+            li {
+              list-style-type: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .gameday_header {
+      margin-top: 1.5vh;
+      width: 100%;
+      height: 80px;
+
+      .away {
+        width: 35%;
+
+        .logo {
+          height: 45px;
+          width: 45px;
+        }
+
+        .score {
+          font-size: 32px;
+          font-weight: 700;
+        }
+
+        .away_team_name {
+          a {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .home {
+        width: 35%;
+
+        .logo {
+          height: 45px;
+          width: 45px;
+        }
+
+        .score {
+          font-size: 32px;
+          font-weight: 700;
+        }
+
+        .home_team_name {
+          a {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .scoring_summary {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+
+      table{
+        tbody{
+          .logo{
+            padding: 0px 2px;
+          }
+        }
+      }
+    }
+
+    .gameday_details{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .probable_pitchers_wrapper{
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 3vh;
+      }
+
+      .batting_order_wrapper{
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 3vh;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+$mlbLogoBlue: #002D72;
+$mlbLogoBlueLight: #013d96;
+$mlbLogoBlueDark: #001d48;
+$mlbLogoRed: #D50032;
+
+$mobileWidth: 425px;
+@mixin mobile {
+  @media (max-width: #{$mobileWidth}) {
+    @content;
+  }
+}
