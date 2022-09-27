@@ -12,14 +12,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://localhost:5001/User/login", {
+      const { data } = await axios.post("http://mlbstatsapi.us-east-1.elasticbeanstalk.com/User/login", {
         username,
         password,
       });
 
-      console.log(username)
-      console.log(password)
-      
+      console.log(username);
+      console.log(password);
       ctxDispatch({ type: "USER_LOGIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
       toast.success("Login Successful");
