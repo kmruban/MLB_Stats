@@ -53,10 +53,7 @@ function MobileTopbar() {
                   </li>
                 ) : null}
                 <li>
-                  <NavLink to="/" onClick={showMenu}>HOME</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/scores" onClick={showMenu}>SCORES</NavLink>
+                  <NavLink to="/" onClick={showMenu}>SCORES</NavLink>
                 </li>
                 <li>
                   <NavLink to="/schedule" onClick={showMenu}>SCHEDULE</NavLink>

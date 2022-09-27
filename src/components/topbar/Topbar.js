@@ -35,9 +35,6 @@ function Topbar() {
         </NavLink>
         <div className="links">
           <NavLink style={navStyle} to="/">
-            HOME
-          </NavLink>
-          <NavLink style={navStyle} to="/scores">
             SCORES
           </NavLink>
           <NavLink style={navStyle} to="/schedule">

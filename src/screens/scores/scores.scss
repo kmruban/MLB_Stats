@@ -1,192 +1,224 @@
 @import "../../global.scss";
 
 .scores_page {
-    margin: 2.5vh 5vw 4vh 5vw;
+  margin: 2.5vh 5vw 4vh 5vw;
 
-    h1 {
-      color: $mlbLogoBlueLight;
-    }
+  h1 {
+    color: $mlbLogoBlueLight;
+  }
 
-    .games {
-      background-color: white;
-      border-radius: 5px;
-      padding: 2.5vh 5vw 2.5vh 5vw;
+  .games {
+    background-color: white;
+    border-radius: 5px;
+    padding: 2.5vh 5vw 2.5vh 5vw;
 
-      ul {
-        list-style-type: none;
-        padding-inline-start: 0;
-        margin-block-start: 0;
-        margin-block-end: 0;
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
 
-        li {
-          padding: auto;
+      li {
+        padding: auto;
 
-          .game_item {
-            border-bottom: 1px dotted rgb(210, 210, 210);
-            height: 100%;
-            width: 100%;
+        .game_item {
+          border-bottom: 1px dotted rgb(210, 210, 210);
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+
+          .game_details {
+            border-right: 1px dotted rgb(210, 210, 210);
+            height: 135px;
+            flex: 5;
+            padding-top: 10px;
             display: flex;
-            flex-direction: row;
+            align-items: center;
 
-            .game_details {
-              border-right: 1px dotted rgb(210, 210, 210);
-              height: 135px;
-              flex: 5;
-              padding-top: 10px;
+            .time {
+              padding-bottom: 7.5px;
+            }
 
-              .time {
-                padding-bottom: 7.5px;
+            ul {
+              li {
+                padding-bottom: 10px;
+                display: flex;
+                align-items: center;
+
+                .logo {
+                  height: 40px;
+                  width: 40px;
+                  padding-right: 10px;
+                }
+
+                .team {
+                  a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 500;
+                  }
+                  a:hover {
+                    color: blue;
+                  }
+                  p {
+                    margin-block-start: 2.5px;
+                    margin-block-end: 0;
+                    font-size: 14px;
+                    color: gray;
+                  }
+                }
               }
+            }
+          }
+
+          .game_location {
+            height: 146px;
+            flex: 2;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-right: 1px dotted rgb(210, 210, 210);
+          }
+
+          .game_status {
+            height: 146px;
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .games {
+      ul {
+        li {
+          .game_item {
+            .game_details {
+              flex: 5 !important;
 
               ul {
                 li {
-                  padding-bottom: 10px;
-                  display: flex;
-                  align-items: center;
-
                   .logo {
                     height: 40px;
-                    width: 40px;
-                    padding-right: 10px;
+                    width: 30px;
                   }
 
                   .team {
                     a {
-                      color: black;
-                      text-decoration: none;
-                      font-weight: 500;
-                    }
-                    a:hover {
-                      color: blue;
+                      font-size: 16px;
                     }
                     p {
-                      margin-block-start: 2.5px;
-                      margin-block-end: 0;
                       font-size: 14px;
-                      color: gray;
                     }
                   }
                 }
               }
             }
             .game_location {
-              height: 146px;
-              flex: 2;
-              justify-content: center;
-              align-items: center;
-              display: flex;
+              display: none !important;
             }
-            .game_picthers {
-              height: 146px;
-              flex: 3;
-              display: flex;
-              align-items: center;
-              justify-content: center;
+            .game_status {
+              flex: 2 !important;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+.schedule_page {
+  margin: 2.5vh 5vw 4vh 5vw;
+
+  h1 {
+    color: $mlbLogoBlueLight;
+  }
+
+  .schedule_games {
+    background-color: white;
+    border-radius: 5px;
+
+    ul {
+      list-style-type: none;
+      padding-inline-start: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 50px;
+
+        .team {
+          width: 20%;
+          padding-left: 10px;
+          display: flex;
+          align-items: center;
+
+          .team_link {
+            display: flex;
+            align-items: center;
+            padding-right: 5px;
+            text-decoration: none;
+
+            .logo {
+              height: 35px;
+              width: 35px;
+              padding-right: 5px;
+            }
+
+            span {
+              font-weight: 500;
+              color: black;
+            }
+            span:hover {
+              color: blue;
+            }
+          }
+        }
+        .status {
+          width: 5%;
+        }
+        .time {
+          width: 10%;
+        }
+        .item {
+          width: 10%;
         }
       }
     }
 
     @include mobile {
-      .game_item {
-        .game_details {
-          flex: 5 !important;
-        }
-        .game_location {
-          flex: 2 !important;
-        }
-      }
-    }
-}
-
-.schedule_page {
-    margin: 2.5vh 5vw 4vh 5vw;
-
-    h1 {
-      color: $mlbLogoBlueLight;
-    }
-
-    .schedule_games {
-      background-color: white;
-      border-radius: 5px;
-
       ul {
-        list-style-type: none;
-        padding-inline-start: 0;
-        margin-block-start: 0;
-        margin-block-end: 0;
-
         li {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          height: 50px;
-
           .team {
-            width: 20%;
-            padding-left: 10px;
-            display: flex;
-            align-items: center;
+            width: 12.5%;
 
             .team_link {
-              display: flex;
-              align-items: center;
-              padding-right: 5px;
-              text-decoration: none;
-
-              .logo {
-                height: 35px;
-                width: 35px;
-                padding-right: 5px;
-              }
+              padding-right: 2.5px;
 
               span {
-                font-weight: 500;
-                color: black;
-              }
-              span:hover {
-                color: blue;
+                display: none;
               }
             }
           }
           .status {
-            width: 5%;
+            width: 25%;
           }
           .time {
-            width: 10%;
+            width: 20%;
           }
           .item {
-            width: 10%;
-          }
-        }
-      }
-
-      @include mobile {
-        ul {
-          li {
-            .team {
-              width: 15%;
-
-              .team_link {
-                padding-right: 2.5px;
-
-                span {
-                  display: none;
-                }
-              }
-            }
-            .status {
-              width: 25%;
-            }
-            .time {
-              width: 20%;
-            }
-            .item {
-              width: 15%;
-            }
+            width: 15%;
           }
         }
       }
     }
+  }
 }

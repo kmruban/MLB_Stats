@@ -412,6 +412,20 @@
         width: 90%;
         margin-right: 0;
         margin-bottom: 3vh;
+
+        .probable_pitchers{
+          .pitchers_stats_table{
+            table{
+              tbody{
+                tr{
+                  td{
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       .batting_order_wrapper{

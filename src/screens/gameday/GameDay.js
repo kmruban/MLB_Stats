@@ -185,6 +185,9 @@ var list;
     list = getPitchersStats(data);
     setList(list);
     console.log(statsList);
+    dispatch({
+      type: "FETCH_SUCCESS_",
+    });
   };
 
   const fetchLineupNames = async () => {

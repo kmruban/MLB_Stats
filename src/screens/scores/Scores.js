@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer } from "react";
 import logger from "use-reducer-logger";
-import moment from "moment";
 import './scores.scss';
+import { scoresHelper } from "../../helpers/stats/StatsHelpers";
 const MLBStatsAPI = require("mlb-stats-api");
 const mlbStats = new MLBStatsAPI();
 
@@ -38,11 +38,9 @@ function Scores() {
             date: currentDate,
           },
         });
-        for (var i = 0; i < response.data.dates[0].games.length; i++) {
-          var date = response.data.dates[0].games[i].gameDate;
-          let newDate = moment.utc(date).subtract(4, "h").format("h:mm a");
-          response.data.dates[0].games[i].gameDate = newDate;
-        }
+        
+        scoresHelper(response);
+      
         dispatch({
           type: "FETCH_SUCCESS",
           payload: response.data.dates[0].games,
@@ -64,7 +62,6 @@ function Scores() {
           <li key={i.gamePk}>
             <div className="game_item">
               <div className="game_details">
-                <div className="time">{i.gameDate}</div>
                 <ul>
                   <li>
                     <img
@@ -106,7 +103,8 @@ function Scores() {
                   </li>
                 </ul>
               </div>
-              <div className="game_location">{i.venue.name}</div>
+              <div className="game_location">{i.venue.name}</div>            
+              <div className="game_status">{i.gameDate}</div>
             </div>
           </li>
         ))}

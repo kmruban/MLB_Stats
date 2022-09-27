@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Topbar from "./components/topbar/Topbar";
 import Footer from "./components/footer/Footer";
-import Home from "./screens/Home";
 import Player from "./screens/Player";
 import HittingStats from "./screens/stats/HittingStats";
 import PitchingStats from "./screens/stats/PitchingStats";
@@ -26,10 +25,9 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/scores" element={<Scores />} />
+            <Route path="/" element={<Scores />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/stats" element={<HittingStats />} />
             <Route path="/stats/pitching" element={<PitchingStats />} />
