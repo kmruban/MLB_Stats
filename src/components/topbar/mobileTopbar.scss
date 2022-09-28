@@ -1,0 +1,104 @@
+@import "../../global.scss";
+
+@include mobile {
+  .navbar {
+    .left {
+      .links {
+        display: none;
+      }
+    }
+    .right {
+      display: none;
+    }
+
+    .mobile_menu {
+      height: 100%;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      padding-right: 3vw;
+
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+
+      .menu_container {
+        position: relative;
+
+        .menu {
+          z-index: 3;
+          position: absolute;
+          top: 15px;
+          right: calc(100% - 42.41px);
+          width: 100vw;
+          height: 100vh;
+          background-color: $mlbLogoBlueDark;
+
+          ul {
+            padding-inline-start: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            li {
+              background-color: $mlbLogoBlueLight;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 45px;
+              width: 75vw;
+              list-style-type: none;
+              margin: 10px 0px;
+              border-radius: 5px;
+
+              a {
+                text-decoration: none;
+                color: white;
+                font-weight: 700;
+              }
+
+              .user_container {
+                .user {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+
+                  svg {
+                    height: 30px;
+                    width: 30px;
+                    padding-right: 2.5vw;
+                  }
+                  p {
+                    font-weight: 700;
+                    font-size: 20px;
+                  }
+                }
+              }
+            }
+            .menu_list:first-child {
+              background-color: $mlbLogoBlueDark;
+            }
+
+            .dropdown {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                ul{
+                    li{
+                        background-color: $mlbLogoBlueLight;
+                        height: 30px;
+                        width: 50vw;
+                    }
+                }
+              }
+          }
+        }
+      }
+    }
+  }
+}

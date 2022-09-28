@@ -37,7 +37,7 @@ const useSortableData = (stats, config = null) => {
 
 function PitchingStatsTable({ pitchingStats }) {
   const { stats, requestSort, sortConfig } = useSortableData(pitchingStats);
-  console.log(stats)
+  console.log(stats);
   const getClassNamesFor = (name) => {
     if (!sortConfig) {
       return;
@@ -53,7 +53,7 @@ function PitchingStatsTable({ pitchingStats }) {
           <button>Hitting</button>
         </a>
         <a href="/stats/pitching">
-          <button>Pitching</button>
+          <button className="active">Pitching</button>
         </a>
       </div>
       <div className="table_scroller">

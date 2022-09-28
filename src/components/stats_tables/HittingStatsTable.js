@@ -49,7 +49,7 @@ function HittingStatsTable({ hittingStats }) {
       <h1>MLB Stats</h1>
       <div className="stats_routes">
         <a href="/stats">
-          <button>Hitting</button>
+          <button className="active">Hitting</button>
         </a>
         <a href="/stats/pitching">
           <button>Pitching</button>

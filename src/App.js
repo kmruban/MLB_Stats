@@ -5,15 +5,15 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Topbar from "./components/topbar/Topbar";
 import Footer from "./components/footer/Footer";
-import Player from "./screens/Player";
+import Player from "./screens/players/Player";
 import HittingStats from "./screens/stats/HittingStats";
 import PitchingStats from "./screens/stats/PitchingStats";
 import Scores from "./screens/scores/Scores";
 import Schedule from "./screens/scores/Schedule";
 import GameDay from "./screens/gameday/GameDay";
-import Register from "./screens/Register";
-import Login from "./screens/Login";
-
+import Register from "./screens/user_accounts/Register";
+import Login from "./screens/user_accounts/Login";
+import Account from "./screens/user_accounts/Account";
 
 function App() {
   return (
@@ -25,9 +25,10 @@ function App() {
         </header>
         <main>
           <Routes>
+            <Route path="/" element={<Scores />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Scores />} />
+            <Route path="/account" element={<Account />} />
             <Route path="/schedule" element={<Schedule />} />
             <Route path="/stats" element={<HittingStats />} />
             <Route path="/stats/pitching" element={<PitchingStats />} />
