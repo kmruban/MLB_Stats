@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
     try {
       await axios.post(
-        "https://mlbstatsapi.us-east-1.elasticbeanstalk.com/User/register",
+        "https://apimlbstats.com/User/register",
         {
           firstname,
           lastname,
