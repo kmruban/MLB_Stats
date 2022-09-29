@@ -43,7 +43,6 @@
             justify-content: center;
 
             li {
-              background-color: $mlbLogoBlueLight;
               display: flex;
               align-items: center;
               justify-content: center;
@@ -51,12 +50,21 @@
               width: 75vw;
               list-style-type: none;
               margin: 10px 0px;
-              border-radius: 5px;
 
               a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 text-decoration: none;
                 color: white;
                 font-weight: 700;
+                font-size: 16px;
+                height: 100%;
+                width: 100%;
+                border-radius: 5px;
+                border: none;
+                background-color: $mlbLogoBlueLight;
+
               }
 
               .user_container {
@@ -66,19 +74,26 @@
                   align-items: center;
                   justify-content: center;
 
-                  svg {
+                  .user_icon {
                     height: 30px;
                     width: 30px;
+                    padding-right: 2.5vw;
+                  }
+                  #dropdown_arrow {
+                    padding-top: 2.5px;
+                    height: 15px;
+                    width: 15px;
                     padding-right: 2.5vw;
                   }
                   p {
                     font-weight: 700;
                     font-size: 20px;
+                    padding-right: 1.5vw;
                   }
                 }
               }
             }
-            .menu_list:first-child {
+            .menu_list_user {
               background-color: $mlbLogoBlueDark;
             }
 

@@ -1,9 +1,11 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { toast } from "react-toastify";
 import { Store } from "../../Store";
 
 function Login() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -22,6 +24,7 @@ function Login() {
       ctxDispatch({ type: "USER_LOGIN", payload: data });
       localStorage.setItem("userInfo", JSON.stringify(data));
       toast.success("Login Successful");
+      navigate('/');
     } catch (err) {
       toast.error(err);
     }
