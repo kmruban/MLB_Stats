@@ -13,7 +13,7 @@ function Register() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://apimlbstats.com/api/Users/register",
+        "https://apimlbstats.com/api/Users/register",
         {
           firstname,
           lastname,

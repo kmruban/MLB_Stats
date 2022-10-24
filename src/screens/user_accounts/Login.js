@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://apimlbstats.com/api/Users/login", {
+      const { data } = await axios.post("https://apimlbstats.com/api/Users/login", {
         username,
         password,
       });
