@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -14,7 +14,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://apimlbstats.com/User/login", {
+      const { data } = await axios.post("http://apimlbstats.com/api/Users/login", {
         username,
         password,
       });
@@ -29,6 +29,25 @@ function Login() {
       toast.error(err);
     }
   };
+
+  ////// LIST USERS ////////////
+  /*
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          'http://localhost:5000/api/Users'
+        );
+        console.log(response)
+      }
+      catch (error){
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+  */
+  /////////////////////////////
 
   return (
     <div className="login_page">

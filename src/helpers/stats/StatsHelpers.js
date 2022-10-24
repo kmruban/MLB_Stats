@@ -9,5 +9,8 @@ export function scoresHelper(response){
         if(response.data.dates[0].games[i].status.abstractGameState === "Live"){
           response.data.dates[0].games[i].gameDate = response.data.dates[0].games[i].teams.away.score + "-" + response.data.dates[0].games[i].teams.home.score;
         }
+        if(response.data.dates[0].games[i].status.abstractGameState === "Final"){
+          response.data.dates[0].games[i].gameDate =  "Final: " + response.data.dates[0].games[i].teams.away.score + "-" + response.data.dates[0].games[i].teams.home.score;
+        }
       }
 }

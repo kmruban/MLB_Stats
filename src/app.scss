@@ -5,6 +5,7 @@
   background-color: rgb(236, 236, 236);
 
   main{
+    min-height: calc(100vh - 60px - 60px);
     .login_page{
       display: flex;
       flex-direction: column;

@@ -48,9 +48,9 @@ function Topbar() {
       <div className="right">
         {userInfo ? (
           <div className="dropdown_container">
-            <div className="dropdown_user">
+            <div className="dropdown_user" onClick={dropdown}>
               <FaUserCircle />
-              <p onClick={dropdown}>
+              <p>
                 {userInfo.firstname + " " + userInfo.lastname}
               </p>
             </div>
