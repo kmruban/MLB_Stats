@@ -38,6 +38,7 @@ function StatsFilters(props) {
         isSearchable={false}
       />
     </div>
+    
   );
 }
 
