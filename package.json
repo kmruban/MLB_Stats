@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
+  "homepage": "https://kmruban.github.io/mlb_stats",
   "private": true,
   "dependencies": {
     "@mui/material": "^5.10.3",
