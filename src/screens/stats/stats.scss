@@ -3,32 +3,40 @@
 .stats_page {
   margin: 2.5vh 16px 16px 16px;
 
-  h1 {
+  .title {
     color: $mlbLogoBlueLight;
   }
 
+  .stats_filters {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    .css-b62m3t-container {
+      margin-right: 1rem;
+      min-width: 150px;
+    }
+  }
+
   .stats_routes {
-    margin-bottom: 20px;
+    margin-bottom: 0.75rem;
 
-    a {
-      button {
-        color: $mlbLogoBlue;
-        background-color: transparent;
-        font-weight: 700;
-        font-size: 26px;
-        margin-right: 10px;
-        border: none;
-        cursor: pointer;
-        padding: 2px;
-      }
+    button {
+      color: $mlbLogoBlue;
+      background-color: transparent;
+      font-weight: 700;
+      font-size: 26px;
+      margin-right: 10px;
+      border: none;
+      cursor: pointer;
+      padding: 2px;
+    }
 
-      button:hover {
-        color: $mlbLogoRed;
-      }
+    button:hover {
+      color: $mlbLogoRed;
+    }
 
-      .active {
-        color: $mlbLogoRed;
-      }
+    .active {
+      color: $mlbLogoRed;
     }
   }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useState } from "react";
 import logger from "use-reducer-logger";
 import moment from "moment";
-import './scores.scss';
+import "./scores.scss";
 const MLBStatsAPI = require("mlb-stats-api");
 const mlbStats = new MLBStatsAPI();
 
@@ -45,7 +45,6 @@ function Schedule() {
     "December",
   ];
 
-
   //today
   const currentDateNumber = `${current.getFullYear()}-${
     current.getMonth() + 1
@@ -56,7 +55,7 @@ function Schedule() {
   let month = months[current.getMonth()];
   const currentDateName = `${day} ${month} ${current.getDate()}`;
 
- /*
+  /*
   //tomorrow
   const tomorrow = `${current.getFullYear()}-${current.getMonth() + 1}-${
     current.getDate() + 1
@@ -80,10 +79,9 @@ function Schedule() {
   }`;
 */
 
-  const [{ schedule }, dispatch] =
-    useReducer(logger(reducer), {
-      schedule: [],
-    });
+  const [{ schedule }, dispatch] = useReducer(logger(reducer), {
+    schedule: [],
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -93,7 +91,6 @@ function Schedule() {
           params: {
             sportId: 1,
             date: currentDateNumber,
-            //date: "2022-06-10",
           },
         });
 
