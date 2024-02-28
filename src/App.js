@@ -1,7 +1,6 @@
 import React from "react";
 import "./app.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Topbar from "./components/topbar/Topbar";
@@ -16,7 +15,7 @@ import Teams from "./screens/teams/Teams";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="app">
         <ToastContainer position="top-center" limit={1} />
         <header>
@@ -37,7 +36,7 @@ function App() {
           <Footer />
         </footer>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
